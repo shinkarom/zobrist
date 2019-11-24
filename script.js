@@ -400,6 +400,6 @@ function fenChange(){
 
 function bodyLoad(){
 	document.querySelector("#fen").addEventListener("input",fenChange);
-	document.querySelector("#fen").value = "rnbqkbnr/p1pppppp/8/8/PpP4P/8/1P1PPPP1/RNBQKBNR b KQkq c3 0 3";
+	//document.querySelector("#fen").value = "rnbqkbnr/p1pppppp/8/8/PpP4P/8/1P1PPPP1/RNBQKBNR b KQkq c3 0 3";
 	fenChange();
 }
