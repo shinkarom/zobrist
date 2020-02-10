@@ -250,7 +250,7 @@ function xorHash(arr, num) {
 }
 
 function parseEnPas(str) {
-	if(str=="")
+	if(str==""||str=="-")
 		return;
 	if(str.length!=2){
 		error = true;
@@ -386,7 +386,9 @@ function fenChange(){
 	pawnNearby = false;
 	
 	let hash = emptyHash;
-	let fen = document.querySelector("#fen").value.split(" ");
+	let fen = document.querySelector("#fen").value.trim().split(" ");
+	if(fen.length!=6)
+		error=true;
 	parseEnPas(fen[3]);
 	hash = hashPieces(hash,fen[0]);
 	if(pawnNearby)
